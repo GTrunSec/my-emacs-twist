@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "bind-key": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1612973363,
+        "narHash": "sha256-Cyu9GixhdKUaGADCC/pmyEdRxRLIE97XgqSIcsh74v8=",
+        "owner": "jwiegley",
+        "repo": "use-package",
+        "rev": "a7422fb8ab1baee19adb2717b5b47b9c3812a84c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jwiegley",
+        "repo": "use-package",
+        "type": "github"
+      }
+    },
+    "readable-mono-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650101880,
+        "narHash": "sha256-FsQbml2aFdUcr6A3rTQcyf/x7X/GsB+d8jI5uuG2R2M=",
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "rev": "cd4ff1f3bd464aeb86207afbf3f8a03852e11146",
+        "type": "github"
+      },
+      "original": {
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "type": "github"
+      }
+    },
+    "readable-typo-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650101880,
+        "narHash": "sha256-FsQbml2aFdUcr6A3rTQcyf/x7X/GsB+d8jI5uuG2R2M=",
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "rev": "cd4ff1f3bd464aeb86207afbf3f8a03852e11146",
+        "type": "github"
+      },
+      "original": {
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "bind-key": "bind-key",
+        "readable-mono-theme": "readable-mono-theme",
+        "readable-typo-theme": "readable-typo-theme",
+        "use-package": "use-package"
+      }
+    },
+    "use-package": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1612973363,
+        "narHash": "sha256-Cyu9GixhdKUaGADCC/pmyEdRxRLIE97XgqSIcsh74v8=",
+        "owner": "jwiegley",
+        "repo": "use-package",
+        "rev": "a7422fb8ab1baee19adb2717b5b47b9c3812a84c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jwiegley",
+        "repo": "use-package",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

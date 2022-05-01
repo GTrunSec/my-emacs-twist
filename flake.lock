@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "centaur": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651336584,
+        "narHash": "sha256-7g78ff6SNq2jQx4AKBSUx+gCiCzw3LLjdLvQbgZYTbs=",
+        "owner": "seagle0128",
+        "repo": ".emacs.d",
+        "rev": "881bcac74af3c0d46a453e8c7b9224fe1209ca11",
+        "type": "github"
+      },
+      "original": {
+        "owner": "seagle0128",
+        "repo": ".emacs.d",
+        "type": "github"
+      }
+    },
     "elisp-helpers": {
       "flake": false,
       "locked": {
@@ -177,6 +193,7 @@
     },
     "root": {
       "inputs": {
+        "centaur": "centaur",
         "emacs": "emacs",
         "emacs-unstable": "emacs-unstable",
         "epkgs": "epkgs",

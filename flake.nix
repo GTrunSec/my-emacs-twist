@@ -27,14 +27,16 @@
       flake = false;
     };
 
-    emacs = {
-      url = "github:emacs-mirror/emacs";
-      flake = false;
-    };
+    emacs.url = "github:emacs-mirror/emacs";
+    emacs.flake = false;
 
     emacs-unstable.url = "github:nix-community/emacs-overlay";
+    emacs-unstable.inputs.nixpkgs.follows = "nixpkgs";
 
     # Configuration repositories
+    centaur.url = "github:seagle0128/.emacs.d";
+    centaur.flake = false;
+
     terlar.url = "github:terlar/emacs-config";
     terlar.flake = false;
   };
@@ -50,14 +52,11 @@
     (system: let
       inherit (nixpkgs) lib;
 
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [
-          inputs.emacs-unstable.overlay
-          inputs.org-babel.overlay
-          inputs.twist.overlay
-        ];
-      };
+      pkgs = nixpkgs.legacyPackages.${system}.appendOverlays [
+        inputs.emacs-unstable.overlay
+        inputs.org-babel.overlay
+        inputs.twist.overlay
+      ];
 
       inventories = import ./lib/inventories.nix inputs;
 
@@ -67,14 +66,9 @@
           inherit (inputs) terlar;
         };
 
-        scimax = import ./profiles/scimax {
+        guangtao = import ./profiles/guangtao {
           inherit pkgs;
-          inherit (inputs) scimax;
-          inherit
-            (twist.lib {inherit lib;})
-            parseUsePackages
-            emacsBuiltinLibraries
-            ;
+          inherit (inputs) centaur;
         };
       };
 
