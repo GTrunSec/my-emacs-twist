@@ -137,8 +137,10 @@
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nongnu": {
@@ -184,25 +186,8 @@
         "nixpkgs": "nixpkgs",
         "nongnu": "nongnu",
         "org-babel": "org-babel",
-        "scimax": "scimax",
         "terlar": "terlar",
         "twist": "twist"
-      }
-    },
-    "scimax": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1648824157,
-        "narHash": "sha256-NQeHofW6nWXmBEgBiBrm/EAkZn7tLP8Mx4cTZvwT2Sc=",
-        "owner": "jkitchin",
-        "repo": "scimax",
-        "rev": "e0f6b785202d53d69dd1f5cdfc9c9f4ae53cfb33",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jkitchin",
-        "repo": "scimax",
-        "type": "github"
       }
     },
     "terlar": {

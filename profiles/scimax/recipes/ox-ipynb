@@ -1,1 +1,0 @@
-(ox-ipynb :fetcher github :repo "jkitchin/ox-ipynb")

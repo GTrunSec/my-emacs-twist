@@ -3,16 +3,17 @@
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    twist = {
-      url = "github:emacs-twist/twist.nix";
-    };
+    twist.url = "github:emacs-twist/twist.nix";
+    twist.inputs.nixpkgs.follows = "nixpkgs";
+
     org-babel.url = "github:emacs-twist/org-babel";
+    org-babel.inputs.nixpkgs.follows = "nixpkgs";
 
-    melpa = {
-      url = "github:melpa/melpa";
-      flake = false;
-    };
+    melpa.url = "github:melpa/melpa";
+    melpa.flake = false;
+
     gnu-elpa = {
       url = "git+https://git.savannah.gnu.org/git/emacs/elpa.git?ref=main";
       flake = false;
@@ -34,15 +35,8 @@
     emacs-unstable.url = "github:nix-community/emacs-overlay";
 
     # Configuration repositories
-    terlar = {
-      url = "github:terlar/emacs-config";
-      # Simply import as an Emacs configuration repository
-      flake = false;
-    };
-    scimax = {
-      url = "github:jkitchin/scimax";
-      flake = false;
-    };
+    terlar.url = "github:terlar/emacs-config";
+    terlar.flake = false;
   };
 
   outputs = {

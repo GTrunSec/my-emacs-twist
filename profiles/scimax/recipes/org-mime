@@ -1,2 +1,0 @@
-(org-mime :fetcher github :repo "jkitchin/org-mime"
-          :branch "file-eqns")
